@@ -39,5 +39,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 # Props
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Arch
+TARGET_2ND_ARCH_VARIANT := armv8-2a
+
 # inherit from the proprietary version
 -include vendor/sony/pdx215/BoardConfigVendor.mk

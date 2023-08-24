@@ -22,24 +22,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 IS_PHONE := true
 
-PRODUCT_NAME := lineage_pdx215
+PRODUCT_NAME := evolution_pdx215
 PRODUCT_DEVICE := pdx215
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
-PRODUCT_MODEL := Xperia 1 III
+PRODUCT_MODEL := SO-51B
 
-PRODUCT_SYSTEM_NAME := XQ-BC72
-PRODUCT_SYSTEM_DEVICE := XQ-BC72
+PRODUCT_SYSTEM_NAME := SO-51B
+PRODUCT_SYSTEM_DEVICE := SO-51B
 
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME) \
-    PRIVATE_BUILD_DESC="XQ-BC72-user 13 61.2.A.0.447 061002A000044700046651803 release-keys"
+    PRIVATE_BUILD_DESC="SO-51B-user 13 61.2.C.0.161 061002C000016103049054564 release-keys"
 
-BUILD_FINGERPRINT := Sony/XQ-BC72/XQ-BC72:13/61.2.A.0.447/061002A000044700046651803:user/release-keys
+BUILD_FINGERPRINT := docomo/SO-51B/SO-51B:13/61.2.C.0.161/061002C000016103049054564:user/release-keys
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.evolution.build.vendor_security_patch=2023-07-01
